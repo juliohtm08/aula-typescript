@@ -47,8 +47,8 @@ async function getRepositories(userLogin: string): Promise<void> {
 }
 
 async function sumRepositories(): Promise<void> {
-  const sumRepo = users.reduce((soma, user) => {
-    return soma + user.public_repos;
+  const sumRepo = users.reduce((acc, user) => {
+    return acc + user.public_repos;
   }, 0);
 
   console.log(`Total de repositórios: ${sumRepo}`);
